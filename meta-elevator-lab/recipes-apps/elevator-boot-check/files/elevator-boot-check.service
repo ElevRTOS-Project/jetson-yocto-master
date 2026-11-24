@@ -1,0 +1,12 @@
+[Unit]
+Description=Record this Jetson boot in the elevator lab database
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/mkdir -p /srv/elevator-lab
+ExecStart=@BINDIR@/elevator-boot-check
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

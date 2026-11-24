@@ -1,0 +1,12 @@
+# Yocto work directories and local build output
+build/
+tmp/
+downloads/
+sstate-cache/
+*.log
+*.zip
+*.tegraflash.tar.gz
+*.tegraflash.tar.gz.sha256
+
+# Windows host configuration
+.wslconfig*
